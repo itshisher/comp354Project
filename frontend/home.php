@@ -23,7 +23,7 @@
             //use a while statement to show all the books in the database
             //uid in table records is compared with username to get the information on books status
             while ($list = mysqli_fetch_array($relust)) {
-                $sql = "select * from records";
+                $sql = "select * from records where bid='$list[bid]'  and uid='$_SESSION[username]' ";
                 $sqlrelust = mysqli_query($connection, $sql);
                 $rows = mysqli_fetch_array($sqlrelust);
                 $state = $rows['state'];
@@ -31,22 +31,26 @@
                 echo "<li>
                     <img src=" . $list['img'] . ">
                     <h3>" . $list['bookname'] . "</h3>
-                    <h4><span>Author: " . $list['author'] . "</span><span> Category: " . $list['category'] . "</span></h4>
-                    <p>" . $list['description'] . "</p>
+                    <h3><span>Author: " . $list['author'] . "</span><span> Category: " . $list['category'] . "</span></h3>
+                    <p>Description: " . $list['description'] . "</p>
+                    
                     <p>  
                 ";?>
                   
-                <!-- <a <?php if($state=='reading'){ echo "style='pointer-events: none; background-color: #999;'";} ?> href="action.php?original=<?php  echo $state; ?>&action=reading&bid=<?php echo $list['bid']; ?>">Reading</a>
+                <!-- <a <?php if($state=='reading'){ echo "style='pointer-events: none; background-color: #999;'";} ?> href="../backend/action.php?original=<?php  echo $state; ?>&action=reading&bid=<?php echo $list['bid']; ?>">Reading</a>
                 
-                <a <?php if($state=='toread'){ echo "style='pointer-events: none;background-color: #999;'";} ?> href="action.php?original=<?php echo $state; ?>&action=toread&bid=<?php echo $list['bid']; ?> ">To read</a>
+                <a <?php if($state=='toread'){ echo "style='pointer-events: none;background-color: #999;'";} ?> href="../backend/action.php?original=<?php echo $state; ?>&action=toread&bid=<?php echo $list['bid']; ?> ">To read</a>
 
-                <a <?php if($state=='read'){ echo "style='pointer-events: none;background-color: #999;'";} ?> href="action.php?original=<?php echo $state;?>&action=read&bid=<?php echo $list['bid']; ?> ">Read</a>
+                <a <?php if($state=='read'){ echo "style='pointer-events: none;background-color: #999;'";} ?> href="../backend/action.php?original=<?php echo $state;?>&action=read&bid=<?php echo $list['bid']; ?> ">Read</a>
 
-                <a <?php if($state=='nofinish'){ echo "style='pointer-events: none;background-color: #999;'";} ?> href="action.php?original=<?php echo $state;?>&action=nofinish&bid=<?php echo $list['bid']; ?> ">Did Not Finish</a>
+                <a <?php if($state=='nofinish'){ echo "style='pointer-events: none;background-color: #999;'";} ?> href="../backend/action.php?original=<?php echo $state;?>&action=nofinish&bid=<?php echo $list['bid']; ?> ">Did Not Finish</a>
 
-                <a <?php if($state=='favorite'){ echo "style='pointer-events: none;background-color: #999;'";} ?> href="action.php?original=<?php echo $state;?>&action=favorite&bid=<?php echo $list['bid']; ?> ">Favorite</a> -->
-      
+                <a <?php if($state=='favorite'){ echo "style='pointer-events: none;background-color: #999;'";} ?> href="../backend/action.php?original=<?php echo $state;?>&action=favorite&bid=<?php echo $list['bid']; ?> ">Favorite</a> -->
+                
                 </p>
+
+                <p>-------------------------------------------------------</p>
+
                 </li>
 
           <?php      }
