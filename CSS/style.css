@@ -1,0 +1,132 @@
+nav {
+  width: 100%;
+  height: 60%;
+  background-color: rgb(37, 35, 35);
+}
+
+/* Make sure all the contents in the website stays within the same line*/
+.wrapper {
+  width: 1900px;
+  margin: 0 auto;
+}
+
+/* Applies styling to the immediate and nested offspring */
+nav .wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+  float: left;
+}
+
+nav ul li a {
+  font-family: "Roboto", sans-serif;
+  font-size: 26px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0 20px;
+  text-transform: capitalize;
+}
+
+nav img {
+  width: 600px;
+  height: 220px;
+}
+
+section {
+  background-color: #fff;
+  width: 100%;
+  padding: 20px;
+}
+
+section form div a {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+section a {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+section button {
+  font-size: 20px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+body {
+  background-color: #333333;
+}
+
+h1 {
+  font-size: 34px;
+  padding: auto;
+}
+
+h2 {
+  font-size: 32px;
+  padding: auto;
+}
+
+p {
+  font-size: 24px;
+}
+
+.signup-form {
+  text-align: center;
+  padding-bottom: 400px;
+}
+
+.signup-form form input {
+  width: 20%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.signup-form form button {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+.signup-form-style label {
+  display: inline-block;
+  text-align: right;
+  width: 100px;
+}
+
+.signup-form-style input {
+  vertical-align: top;
+}
+
+.signup-form-style {
+  display: flexbox;
+  justify-content: center;
+}
+
+/* query result */
+.qryres-table {
+  border: 1px solid black;
+}
+
+table,
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 15px;
+}
