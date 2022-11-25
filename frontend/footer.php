@@ -2,4 +2,4 @@
 </body>
 </html>
 
-<script src="JS/script.js"></script>
+<script src="../JS/script.js"></script>

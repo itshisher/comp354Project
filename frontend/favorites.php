@@ -4,14 +4,14 @@
 
     <section class="index-intro">
         <h1>Welcome to the book shelf web app!</h1>
-        <p>Here you can check for the books that are already read.</p>
+        <p>Here are the books that favorited by you!</p>
         
         <?php
             require_once '../backend/dbh.php';
             require_once '../backend/functions.php';
 
             //select if there is any book under read in record table in the database
-            $sql = "select * from records where state='read' and uid='$_SESSION[username]' ";
+            $sql = "select * from records where state='favorite' and uid='$_SESSION[username]' ";
             $rs = mysqli_query($connection, $sql);
       
             $num = mysqli_num_rows($rs);
@@ -29,7 +29,9 @@
                         <h3><span>Author: " . $list['author'] . "</span><span> Category: " . $list['category'] . "</span></h3>
                         <p>Description: " . $list['description'] . "</p>
                         
-                        <a href=../backend/action.php?original=reading&action=favorite&bid=" . $list['bid'] . ">Favorite</a>
+                      <p>    
+                      <a href=../backend/action.php?original=reading&action=toread&bid=" . $list['bid'] . ">Unfavorite</a>
+                      </p>
 
                       <p>-------------------------------------------------------</p>
                       

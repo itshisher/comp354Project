@@ -29,7 +29,7 @@ session_start();
                         echo "<li><a href='reading.php'>Reading</a></li>";
                         echo "<li><a href='toRead.php'>To Read</a></li>";
                         echo "<li><a href='read.php'>Read</a></li>";
-                        echo "<li><a href='finish.php'>Finish</a></li>";
+                        echo "<li><a href='didNotFinish.php'>Did Not Finish</a></li>";
                         echo "<li><a href='favorites.php'>Favorites</a></li>";
                         echo "<li><a href='recommendations.php'>Recommendations</a></li>";
                         echo "<li><a href='logout.php'>Log out</a></li>"; 

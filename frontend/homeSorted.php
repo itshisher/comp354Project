@@ -17,7 +17,7 @@
             require_once '../backend/dbh.php';
             require_once '../backend/functions.php';
 
-            $sqllist = "select * from book";
+            $sqllist = "select * from book order by category";
             $relust = mysqli_query($connection, $sqllist);
             $list = mysqli_fetch_array($relust);
             
@@ -48,6 +48,7 @@
 
                 <a <?php if($state=='read'){ echo "style='pointer-events: none;background-color: #999;'";} ?> href="../backend/action.php?original=<?php echo $state;?>&action=read&bid=<?php echo $list['bid']; ?> ">Read</a>
 
+                <a <?php if($state=='nofinish'){ echo "style='pointer-events: none;background-color: #999;'";} ?> href="../backend/action.php?original=<?php echo $state;?>&action=nofinish&bid=<?php echo $list['bid']; ?> ">Did Not Finish</a>
 
                 <a <?php if($state=='favorite'){ echo "style='pointer-events: none;background-color: #999;'";} ?> href="../backend/action.php?original=<?php echo $state;?>&action=favorite&bid=<?php echo $list['bid']; ?> ">Favorite</a>
                 
