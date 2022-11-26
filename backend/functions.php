@@ -211,6 +211,7 @@ function edit_del_org($result, $headers) {
 }
 
 function edit_del_emp($result, $headers) {
+    
     if ($result->num_rows == 0) {
         echo '0 results';
         return;
