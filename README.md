@@ -1,3 +1,4 @@
+<h3>Summary</h3>
 This is a Book-Project web app with shelves:<br>
 &nbsp;&nbsp;&nbsp;Reading: Books that are currently being read<br>
 &nbsp;&nbsp;&nbsp;Read: Books that are already read<br>
@@ -9,3 +10,14 @@ based on the user’s interest<br>
 Created a local database called bookappdb with three tables (book, records, user)<br>
 login, signup system are included<br>
 Home page can show all books that exist in the database<br>
+The recommendation of books to a user is based on book genres in this user's reading shelf<br>
+
+<h3>Getting start</h3>
+Import sql file into a local database tool, check if the database name is matched with dbh.php in backend folder <br>
+Unzip the download file and move it to the path :\xampp\htdocs if you are using xampp as PHP development environment <br>
+Go to http://localhost/comp354Project in your web browser to access the frontend
+
+<h3>Log in with the test user</h3>
+Username: user123 <br>
+Password: 123456 <br>
+or feel free to create you own account to try out
