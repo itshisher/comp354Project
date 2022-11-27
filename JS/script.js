@@ -1,4 +1,4 @@
-var btn = document.getElementById("sort1");
+var btn = document.getElementById("home");
 btn.addEventListener("click", function () {
-  document.location.href = "homeSorted.php";
+  document.location.href = "../frontend/homeSorted.php";
 });

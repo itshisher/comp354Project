@@ -11,12 +11,13 @@
             require_once '../backend/functions.php';
 
             //select if there is any book under read in record table in the database
-            $sql = "select * from records where state='read' and uid='$_SESSION[username]' ";
+            //$sql = "select * from records where state='read' and uid='$_SESSION[username]'";
+            $sql = "SELECT * FROM records LEFT OUTER JOIN book ON records.bid = book.bid WHERE records.state='read' AND records.uid = '$_SESSION[username]' ORDER BY book.category;";
             $rs = mysqli_query($connection, $sql);
       
             $num = mysqli_num_rows($rs);
             if ($num < 1) {
-                echo "<h2>No book under this section, please read some books.</h2>";
+                echo "<a href='home.php'><h2>No book has been finished, please click here to choose your books.</h2></a>";
             } else {
                 while ($row = mysqli_fetch_array($rs)) {
                     $sqllist = "select * from book where bid='$row[bid]'";
@@ -29,7 +30,8 @@
                         <h3><span>Author: " . $list['author'] . "</span><span> Category: " . $list['category'] . "</span></h3>
                         <p>Description: " . $list['description'] . "</p>
                         
-                        <a href=../backend/action.php?original=reading&action=favorite&bid=" . $list['bid'] . ">Favorite</a>
+                        
+                        <a href=../backend/action.php?original=read&action=favorite&bid=" . $list['bid'] . ">Favorite</a>
 
                       <p>-------------------------------------------------------</p>
                       

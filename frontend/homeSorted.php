@@ -10,7 +10,7 @@
     } ?> </h1>
 
     <p>You can check all the available books in our system!</p>
-    <button id="sort1">Sort by genre</button> <br>
+    
 
     <ul>
         <?php
@@ -25,7 +25,7 @@
             //use a while statement to show all the books in the database
             //uid in table records is compared with username to get the information on books status
             while ($list = mysqli_fetch_array($relust)) {
-                $sql = "select * from records where uid='$_SESSION[username]' ";
+                $sql = "select * from book ";
                 $sqlrelust = mysqli_query($connection, $sql);
                 $rows = mysqli_fetch_array($sqlrelust);
                 $state = $rows['state'];
@@ -48,7 +48,6 @@
 
                 <a <?php if($state=='read'){ echo "style='pointer-events: none;background-color: #999;'";} ?> href="../backend/action.php?original=<?php echo $state;?>&action=read&bid=<?php echo $list['bid']; ?> ">Read</a>
 
-                <a <?php if($state=='nofinish'){ echo "style='pointer-events: none;background-color: #999;'";} ?> href="../backend/action.php?original=<?php echo $state;?>&action=nofinish&bid=<?php echo $list['bid']; ?> ">Did Not Finish</a>
 
                 <a <?php if($state=='favorite'){ echo "style='pointer-events: none;background-color: #999;'";} ?> href="../backend/action.php?original=<?php echo $state;?>&action=favorite&bid=<?php echo $list['bid']; ?> ">Favorite</a>
                 

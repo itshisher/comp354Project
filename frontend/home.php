@@ -10,7 +10,7 @@
     } ?> </h1>
 
     <p>You can check all the available books in our system!</p>
-    <button id="sort1">Sort by genre</button> <br>
+    <button id="home">Sort by genre</button> <br>
 
     <ul>
         <?php
@@ -25,7 +25,7 @@
             //use a while statement to show all the books in the database
             //uid in table records is compared with username to get the information on books status
             while ($list = mysqli_fetch_array($relust)) {
-                $sql = "select * from records where uid='$_SESSION[username]' ";
+                $sql = "select * from book ";
                 $sqlrelust = mysqli_query($connection, $sql);
                 $rows = mysqli_fetch_array($sqlrelust);
                 $state = $rows['state'];

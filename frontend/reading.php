@@ -6,12 +6,14 @@
         <h1>Welcome to the book shelf web app!</h1>
         <p>Here you can check for the books currently under reading.</p>
         
+
         <?php
             require_once '../backend/dbh.php';
             require_once '../backend/functions.php';
 
             //select if there is any book under reading in record table in the database
-            $sql = "select * from records where state='reading' and uid='$_SESSION[username]' ";
+            // $sql = "select * from records left outer join book on records.bid = book.bid where state='reading' and uid='$_SESSION[username]' order by category";
+            $sql = "SELECT * FROM records LEFT OUTER JOIN book ON records.bid = book.bid WHERE records.state='reading' AND records.uid = '$_SESSION[username]' ORDER BY book.category;";
             $rs = mysqli_query($connection, $sql);
 
             //check how many results being found

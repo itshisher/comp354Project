@@ -10,15 +10,21 @@
             require_once '../backend/dbh.php';
             require_once '../backend/functions.php';
 
-            //select if there is any book under toRead in record table in the database
-            $sql = "select * from records where state='toread' and uid='$_SESSION[username]' ";
+            //select if there is any book under reading in record table in the database
+            // $sql = "select * from records left outer join book on records.bid = book.bid where state='reading' and uid='$_SESSION[username]' order by category";
+            $sql = "SELECT * FROM records LEFT OUTER JOIN book ON records.bid = book.bid WHERE records.state='toread' AND records.uid = '$_SESSION[username]' ORDER BY book.category;";
             $rs = mysqli_query($connection, $sql);
-      
+
+            //check how many results being found
             $num = mysqli_num_rows($rs);
             if ($num < 1) {
+                
                 echo "<a href='home.php'><h2>No book in your planning to read, please click here to choose your books.</h2></a>";
+                
             } else {
                 while ($row = mysqli_fetch_array($rs)) {
+                    //use mysql statements to get results from the database by having attribute names
+                    //use while loop to output results 
                     $sqllist = "select * from book where bid='$row[bid]'";
                     $relust = mysqli_query($connection, $sqllist);
                     $list = mysqli_fetch_array($relust);
@@ -30,14 +36,14 @@
                         <p>Description: " . $list['description'] . "</p>
                         
                       <p>    
-                      <a href=../backend/action.php?original=read&action=reading&bid=" . $list['bid'] . ">Reading</a>
-                      <a href=../backend/action.php?original=reading&action=nofinish&bid=" . $list['bid'] . ">Did Not Finish</a>
-                      <a href=../backend/action.php?original=reading&action=favorite&bid=" . $list['bid'] . ">Favorite</a>
+                      <a href=../backend/action.php?original=toread&action=reading&bid=" . $list['bid'] . ">Reading</a>
+                      <a href=../backend/action.php?original=toread&action=nofinish&bid=" . $list['bid'] . ">Did Not Finish</a>
+                      <a href=../backend/action.php?original=toread&action=favorite&bid=" . $list['bid'] . ">Favorite</a>
       
                       </p>
 
                       <p>-------------------------------------------------------</p>
-                      
+
                       </li>";
                 }
               }
