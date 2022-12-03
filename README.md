@@ -21,3 +21,7 @@ Go to http://localhost/comp354Project in your web browser to access the frontend
 Username: user123 <br>
 Password: 123456 <br>
 or feel free to create you own account to try out
+
+<h3>Database setup</h3>
+dump-bookappdb-202211281538 is the sql file to set up the database <br>
+create a local database called bookappdb, then import the sql file into the database <br>
