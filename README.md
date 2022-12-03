@@ -1,4 +1,5 @@
 <h3>Summary</h3>
+<h3>Summary</h3>
 This is a Book-Project web app with shelves:<br>
 &nbsp;&nbsp;&nbsp;Reading: Books that are currently being read<br>
 &nbsp;&nbsp;&nbsp;Read: Books that are already read<br>
