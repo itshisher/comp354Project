@@ -18,7 +18,7 @@ create a local database called bookappdb, then import the sql file into the data
 
 <h3>2. Dependencies used in the project</h3>
 <h3>3. Screenshots of the project</h3>
-![alt text](https://user-images.githubusercontent.com/78561914/205466859-a7cb025e-0cf9-42a5-82e3-7144e4e82de7.jpg)
+![alt text](https://github.com/itshisher/comp354Project/blob/IMG/login.jpg?raw=true)
 
 <h3>4. Coding standards in the project</h3>
 <h3>5. Folder structure explained</h3>
