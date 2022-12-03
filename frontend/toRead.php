@@ -37,6 +37,7 @@
                         
                       <p>    
                       <a href=../backend/action.php?original=toread&action=reading&bid=" . $list['bid'] . ">Reading</a>
+                      <a href=../backend/action.php?original=toread&action=read&bid=" . $list['bid'] . ">Read</a>
                       <a href=../backend/action.php?original=toread&action=nofinish&bid=" . $list['bid'] . ">Did Not Finish</a>
                       <a href=../backend/action.php?original=toread&action=favorite&bid=" . $list['bid'] . ">Favorite</a>
       

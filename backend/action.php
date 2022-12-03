@@ -13,7 +13,7 @@ $rs = mysqli_query($connection, $sql);
 $row = mysqli_fetch_array($rs);
 $num = mysqli_num_rows($rs);
 
-if($num>0){
+if($num>0 && $action!=='unfavorite'){
   //js function window alert after successfully performing add books functions 
   //history.go(-1) causes the browser to move back one page in the session history
   echo '<script type="text/javascript">alert("Do not repeat the selection!");history.go(-1);</script>';

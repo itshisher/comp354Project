@@ -30,7 +30,9 @@
                         <h3><span>Author: " . $list['author'] . "</span><span> Category: " . $list['category'] . "</span></h3>
                         <p>Description: " . $list['description'] . "</p>
                         
-                        
+                        <a href=../backend/action.php?original=read&action=reading&bid=" . $list['bid'] . ">Reading</a>
+                        <a href=../backend/action.php?original=read&action=toread&bid=" . $list['bid'] . ">To read</a>
+                        <a href=../backend/action.php?original=read&action=nofinish&bid=" . $list['bid'] . ">Did Not Finish</a>
                         <a href=../backend/action.php?original=read&action=favorite&bid=" . $list['bid'] . ">Favorite</a>
 
                       <p>-------------------------------------------------------</p>
