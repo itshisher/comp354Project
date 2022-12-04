@@ -20,6 +20,7 @@ create a local database called bookappdb, then import the sql file into the data
 <h3>3. Screenshots of the project</h3>
 #images
 ![](IMG/login.jpg)
+❮img src="IMG/login.jpg" ❯
 
 
 <h3>4. Coding standards in the project</h3>
