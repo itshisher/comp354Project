@@ -22,7 +22,7 @@ create a local database called bookappdb, then import the sql file into the data
 ![](IMG/login.jpg)
 ❮img src="IMG/login.jpg" ❯
 
-
+![](https://github.com/itshisher/comp354Project/blob/main/IMG/login.jpg?raw=true)
 <h3>4. Coding standards in the project</h3>
 <h3>5. Folder structure explained</h3>
 <h3>6. Summary</h3>
