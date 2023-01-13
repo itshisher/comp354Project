@@ -1,4 +1,4 @@
-<h3>Project Code (5%)</h3>
+<h3>Project description</h3>
 
 
 <h3>1. Instructions to run the project</h3>
